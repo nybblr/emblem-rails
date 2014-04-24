@@ -1,11 +1,11 @@
 require 'sprockets'
 require 'sprockets/engines'
-require 'ember/handlebars/template'
+require 'emblem/rails/handlebars'
 require 'barber-emblem'
 
 module Emblem
   module Rails
-    class Template < Ember::Handlebars::Template
+    class Template < Handlebars
 
       def evaluate(scope, locals, &block)
         target = global_template_target(scope)
@@ -13,7 +13,7 @@ module Emblem
 
         template = data
 
-        if configuration.precompile
+        if configuration[:precompile]
           if raw
             template = precompile_emblem(template)
           else
