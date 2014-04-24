@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Emblem::Rails::VERSION
   gem.authors       = ["Alex Speller", "Alex Matchneer"]
   gem.email         = ["alex@alexspeller.com"]
-  gem.description   = %q{Use emblem.js with ember-rails - see https://github.com/machty/emblem.js}
-  gem.summary       = %q{Use emblem.js with ember-rails}
+  gem.description   = %q{Use emblem.js with rails - see https://github.com/machty/emblem.js}
+  gem.summary       = %q{Use emblem.js with rails}
   gem.homepage      = "http://github.com/alexspeller/emblem-rails"
 
   gem.files         = `git ls-files`.split($/)
@@ -17,5 +17,4 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
   gem.add_dependency "barber-emblem", "~> 0.1.1"
-  gem.add_dependency "ember-rails", ">= 0.14.0"
 end
